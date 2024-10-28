@@ -1,6 +1,7 @@
 package jpabasic.reserve.main;
 
 import jakarta.persistence.EntityExistsException;
+import java.lang.reflect.InvocationHandler;
 import jpabasic.reserve.app.*;
 import jpabasic.reserve.domain.User;
 import jpabasic.reserve.jpa.EMF;
@@ -13,7 +14,24 @@ import java.time.LocalDateTime;
 public class Main {
     
     public static void main(String[] args) {
-      
+        EMF.init();
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            while (true) {
+                System.out.println("명령어를 입력하세요 : ");
+                String line = br.readLine();
+                //
+                if (line == null) break;
+                else if (line.startsWith("new ")) handleNew(line);
+
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        } finally {
+            EMF.close();
+        }
+
+
     }
 
     private static void handleNew(String line) {
@@ -28,13 +46,13 @@ public class Main {
     }
 
     private static void handleGet(String line) {
-       
     }
 
     private static void handleChangeName(String line) {
-       
     }
 
     private static void handleRemove(String line) {
-       
+
+    }
+
 }

@@ -11,5 +11,7 @@ public class MainSequence {
     private static Logger logger = LoggerFactory.getLogger(MainSequence.class);
 
     public static void main(String[] args) {
+
+    }
         
 }

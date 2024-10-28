@@ -1,14 +1,14 @@
-create table jpabegin.hotel_info (
-  hotel_id varchar(50) not null primary key,
-  nm varchar(50),
-  year int,
-  grade varchar(2),
-  created datetime,
-  modified datetime
-) engine innodb character set utf8mb4;
+--create table jpabegin.hotel_info (
+--  hotel_id varchar(50) not null primary key,
+--  nm varchar(50),
+--  year int,
+--  grade varchar(2),
+--  created datetime,
+--  modified datetime
+--) engine innodb character set utf8mb4;
 
-create table jpabegin.review (
-  review_id integer not null auto_increment,
+create table review (
+  review_id integer not null auto_increment primary key,
   hotel_id varchar(50) not null,
   mark integer,
   writer_name varchar(20),
@@ -16,7 +16,7 @@ create table jpabegin.review (
   created datetime
 ) engine innodb character set utf8mb4;
 
-create table jpabegin.access_log (
+create table access_log (
   id integer not null,
   path varchar(200),
   accessed datetime

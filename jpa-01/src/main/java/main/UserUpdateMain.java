@@ -8,5 +8,7 @@ import jpabasic.reserve.domain.User;
 
 public class UserUpdateMain {
     public static void main(String[] args) {
+
+    }
       
 }

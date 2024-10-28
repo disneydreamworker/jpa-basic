@@ -1,4 +1,4 @@
-create table jpabegin.hotel_info (
+create table hotel_info (
   hotel_id varchar(50) not null primary key,
   nm varchar(50),
   year int,
